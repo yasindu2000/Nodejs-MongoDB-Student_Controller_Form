@@ -19,11 +19,19 @@ app.get("/", (req,res)=>{
     )
 })
 
+app.set("views" , path.join(__dirname, '/views'))
 
+app.engine('hbs', exphbs({
+    handlebars: allowInsecurePrototypeAccess(handlebars),
+    extname: "hbs",
+    defaultLayout: "MainLayout",
+    layoutsDir: __dirname + "/views/layouts/",
 
+}))
 
+app.set("view engine", "hbs");
 
 app.listen(3000, ()=>{
 
-    console.log("server unning port 3000");
+    console.log("server running port 3000");
 })
