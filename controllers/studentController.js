@@ -88,3 +88,5 @@ Student.findByIdAndRemove(req.params.id, (err, doc)=>{
     }
 })
 })
+
+module.exports = router

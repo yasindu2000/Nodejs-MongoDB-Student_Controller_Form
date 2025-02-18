@@ -1,6 +1,5 @@
 require('./models/db')
 
-
 const express = require("express")
 const path = require("path")
 const handlebars = require("handlebars")
@@ -9,14 +8,14 @@ const {
     allowInsecurePrototypeAccess,
 } = require('@handlebars/allow-prototype-access')
 
-const bodyParser = require("body-parser")
+const bodyparser = require("body-parser")
 
 const studentController = require("./controllers/studentController")
 
 var app = express();
 
-app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json());
+app.use(bodyparser.urlencoded({extended:false}));
+app.use(bodyparser.json());
 
 app.get("/", (req,res)=>{
 
