@@ -1,5 +1,5 @@
 require('./models/db')
-
+require("./models/student.model");
 const express = require("express")
 const path = require("path")
 const handlebars = require("handlebars")

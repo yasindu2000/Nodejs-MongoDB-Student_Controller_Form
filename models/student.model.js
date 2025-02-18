@@ -22,4 +22,4 @@ var studentSchema = new mongoose.Schema({
 
 })
 
-mongoose.model("Student", studentSchema)
+module.exports =mongoose.model("Student", studentSchema)

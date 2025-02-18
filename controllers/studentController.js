@@ -78,10 +78,10 @@ router.get('/:id',(req , res)=>{
     })
 })
 
-router.get('delete/:id',(req, res)=>{
+router.get('/delete/:id',(req, res)=>{
 Student.findByIdAndRemove(req.params.id, (err, doc)=>{
     if(!err){
-        res.redirect("student/list");
+        res.redirect("/student/list");
     }else{
 
         console.log("erroe in deletion" + err)
