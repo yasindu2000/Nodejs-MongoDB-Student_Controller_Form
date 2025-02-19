@@ -27,9 +27,7 @@ app.get("/", (req,res)=>{
 
 app.set("views" , path.join(__dirname, '/views/'));
 
-app.engine(
-    "hbs", 
-    exphbs({
+app.engine("hbs",exphbs({
     handlebars: allowInsecurePrototypeAccess(handlebars),
     extname: "hbs",
     defaultLayout: "MainLayout",
